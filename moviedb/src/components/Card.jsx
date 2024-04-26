@@ -11,9 +11,15 @@ export default function Card({ result }) {
             src={`https://image.tmdb.org/t/p/original/${
               result.backdrop_path || result.poster_path
             }`}
-            width={500}
-            height={500}
-            className=" object-fit: cover group-hover:opacity-75 rounded-t-md transition-opacity duration-300"
+            // width={500}
+            // height={500}
+            // layout="fill"
+            fill
+            sizes="(min-width: 808px) 50vw, 100vw"
+            style={{
+              objectFit: "cover", // cover, contain, none
+            }}
+            className=" object-fit:cover group-hover:opacity-75 rounded-t-md transition-opacity duration-300"
           ></Image>
         </div>
 
@@ -26,7 +32,9 @@ export default function Card({ result }) {
               {result.vote_average?.toFixed(1)}
             </p>
           </span>
-          <p className="text-blue-300 font-semibold">Epic, Action, Drama</p>
+          <p className="text-blue-300 font-semibold">
+            {result.media_type?.toUpperCase()}
+          </p>
         </div>
       </Link>
     </div>

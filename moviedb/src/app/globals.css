@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .movie-page {
+    width: 78%;
+    height: 33rem;
+    min-height: 33rem; /* Ensure minimum height */
+    
+  }
+  /* ... */
+}
