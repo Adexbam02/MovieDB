@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="flex item-centre gap-3   bg-blue-300 mt-10 p-3 w-full rounded-lg">
         <NavbarItem title="Trending" param="fetchTrending" />
         <NavbarItem title="Top Rated" param="fetchTopR" />
-        <NavbarItem title="New Arrival" param="fetchNewA" />
+        {/* <NavbarItem title="New Arrival" param="fetchNewA" /> */}
       </div>
     </div>
   );
