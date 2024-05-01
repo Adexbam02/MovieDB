@@ -1,25 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-// import { FiThumbsUp } from "react-icons/fi";
 
 export default function Card({ result }) {
   return (
-    <div className="group drop-shadow-md relative bg-red-400 w-[15rem] h-[18rem] rounded-md">
+    <div className="group drop-shadow-md relative w-[15rem] h-[18rem] rounded-md">
       <Link href={`/movie/${result.id}`}>
         <div className="">
           <Image
             src={`https://image.tmdb.org/t/p/original/${
               result.backdrop_path || result.poster_path
             }`}
-            // width={500}
-            // height={500}
-            // layout="fill"
             fill
             sizes="(min-width: 808px) 50vw, 100vw"
             style={{
               objectFit: "cover", // cover, contain, none
             }}
-            className=" object-fit:cover group-hover:opacity-75 rounded-t-md transition-opacity duration-300"
+            className="group-hover:opacity-75 rounded-t-md transition-opacity duration-300"
           ></Image>
         </div>
 

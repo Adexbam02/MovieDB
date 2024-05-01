@@ -11,6 +11,10 @@ export default function SearchBox() {
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push(`/search/${search}`);
+
+    setTimeout(() => {
+      setSearch(""); // Clear search value
+    }, 5000); // 5 seconds
   };
   return (
     <form className="relative bg-red-500 p-00" onSubmit={handleSubmit}>
@@ -21,7 +25,10 @@ export default function SearchBox() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button className="disabled:text-gray-400 bg-transparent" disabled={search === ""}>
+      <button
+        className="disabled:text-gray-400 bg-transparent"
+        disabled={search === ""}
+      >
         <Image
           src={Search}
           width={15}
