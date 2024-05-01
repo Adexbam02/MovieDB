@@ -8,11 +8,9 @@ export default async function MoviePage({ params }) {
   );
   const movieResponse = await res.json();
 
-  console.log(movieResponse);
+  // console.log(movieResponse);
   return (
-    <div className="w-[78%] h-[30rem] bg-gray-400/[.06]  drop-shadow-xl mt-4 p-5 rounded-xl flex items-cente justify-between gap-4">
-      {/* <div className="p-4 flex items-start justify-between"> */}
-      {/* <div className="h-4/6 w-52 bg-black"> */}
+    <div className="w-[78%] h-fit bg-gray-400/[.06]  drop-shadow-xl mt-4 p-5 rounded-xl flex items-cente justify-between gap-4">
       <Image
         src={`https://image.tmdb.org/t/p/original/${
           movieResponse.backdrop_path || movieResponse.poster_path
@@ -22,7 +20,6 @@ export default async function MoviePage({ params }) {
         className="rounded-sm"
         style={{ maxWidth: "100%", height: "100%" }}
       ></Image>
-      {/* </div> */}
 
       <div className="p-2">
         <span className="flex flex-col mb-4">
