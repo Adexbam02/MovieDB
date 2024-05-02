@@ -15,9 +15,7 @@ export default async function Home({ searchParams }) {
   if (!response.ok) {
     throw new Error('Failed to fetch data');
   }
-  const results = data.results; // Assuming data structure with results in 'results' property
-  //  console.log(results)
-  // Integrate `results` into your UI here (using JSX)
+  const results = data.results;
   return (
     <div className="flex items-center justify-center max-w-[80%]">
       {/* Display movie data from `results` here */}

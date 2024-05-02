@@ -21,7 +21,7 @@ export default function SearchBox() {
       <input
         type="text"
         placeholder="Search"
-        className="py-1 px-2 flex-1 rounded-sm outline-none  placeholder:grayscale"
+        className="py-1 px-2 flx-1 rounded-sm outline-none  placeholder:grayscale"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -29,12 +29,12 @@ export default function SearchBox() {
         className="disabled:text-gray-400 bg-transparent"
         disabled={search === ""}
       >
-        <Image
+        {/* <Image
           src={Search}
           width={15}
           height={15}
           className="absolute top-[50%] right-[10%] cursor-pointer text-red-400"
-        ></Image>
+        ></Image> */}
       </button>
     </form>
   );
